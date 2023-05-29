@@ -1,6 +1,6 @@
 # PCAP HTTP Request Sender   
 
-The PCAP HTTP Request Sender is a Python script that reads HTTP requests from a packet capture file and then resends those requests to a specified endpoint. It allows you to configure the endpoint URL, the number of concurrent threads, and the number of requests to send. This script can be executed from the command line.
+The PCAP HTTP Request Sender is a Python script that reads HTTP requests from a [packet capture file](https://en.wikipedia.org/wiki/Pcap) and then resends those requests to a specified endpoint. It allows you to configure the endpoint URL, the number of concurrent threads, and the number of requests to send. This script can be executed from the command line.
 
 ## Prerequisites
 
