@@ -42,6 +42,8 @@ def send_packet(packet, endpoint, counter):
 
 
 def decode_headers(headers):
+    updated_headers = {}
+
     for key, value in headers.items():
         if isinstance(key, bytes):
             key = key.decode()
@@ -49,8 +51,10 @@ def decode_headers(headers):
         if isinstance(value, bytes):
             value = value.decode()
 
-        return {key.replace('_', '-'): value}
+        updated_key = key.replace('_', '-')
+        updated_headers[updated_key] = value
 
+    return updated_headers
 
 def send_requests(endpoint, num_of_threads, pcap):
     counter = ThreadSafeCounter()
